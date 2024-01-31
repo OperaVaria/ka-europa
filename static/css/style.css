@@ -1,3 +1,6 @@
+/* CSS for "Ká-Europa podcast" page (custom) */
+
+/* Global */
 html {
     background-attachment: fixed;
     background-color: #EBD1B0;
@@ -11,11 +14,14 @@ html {
     text-align: center;        
 }
 
+/* All CSS items */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+/* Header */
 
 #myHeader {
     align-content: center;
@@ -36,7 +42,7 @@ html {
 
 #menu-btn {
     cursor: pointer;
-    font-size: 0.75em;
+    font-size: 0.8em;
     margin-left: 20px;
 }  
 
@@ -48,9 +54,11 @@ html {
 
 #return-btn {
     cursor: pointer;    
-    font-size: 0.75em;
+    font-size: 0.8em;
     margin-right: 20px;
 }
+
+/* Side menu */
 
 .sidenav {
     height: 100%;
@@ -61,12 +69,11 @@ html {
     left: 0;
     background-color: #111;
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20%;
+    padding-top: 20vh;
     transition: 0.5s;
     opacity: 0.8;
 }
 
-/* The sidenav menu links */
 .sidenav a {
     padding: 8px 8px 8px 8px;
     text-decoration: none;
@@ -75,39 +82,16 @@ html {
     display: block;
 }
 
-/* Color changing when cursor enters the area */
-i {
-    transition: 0.3s;
-}
-
 .sidenav a:hover {
     transition: 0.5s;
     color: #f1f1f1;
 }
 
-i:hover {
-    transition: 0.3s;
-    color: #818181;
-}
-
-/* On smaller screens hide certain items*/
-@media only screen and (max-width: 720px) {
-    #menu-btn {
-        display: none;
-    }
-    
-    #return-btn {
-        display: none;
-    }
-    
-    #mySideNav {
-        display: none;
-    }
-}
+/* Containers */
 
 .container {
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
     display: flex;
     align-items: center;
     align-content: space-around;
@@ -124,26 +108,37 @@ i:hover {
     justify-content: center;
 }
 
+/* Container items */
+
 .item {
-    font-size: 0.8rem;
-    max-width: 60%;
-    padding: 25px;
-    text-decoration: none
+    padding: 25px;    
 }
 
 .title {
     flex: 100%;
-    font-size: 1.25rem;    
+    font-size: 1.5rem;    
     font-style: normal;
     font-weight: normal;
-    max-width: 70%
+    max-width: 60vw
 }
 
 .subtitle {
     flex: 100%;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-style: italic;
     font-weight: normal;
+    max-width: 60vw
+}
+
+.text {
+    font-size: 1rem;
+    max-width: 50vw;
+    text-decoration: none
+}
+
+.spotify {
+    flex: 100%;
+    max-width: 60vw;
 }
 
 .fullwide {
@@ -162,6 +157,8 @@ i:hover {
     margin: 0;
     border: 0;
 }
+
+/* Buttons */
 
 button {
     background-color: #026d46;
@@ -183,10 +180,25 @@ button:hover {
     transition: 0.3s;
 }
 
+/* Color change animation for bootstrap icons */
+
+i {
+    transition: 0.3s;
+}
+
+i:hover {
+    transition: 0.3s;
+    color: #818181;
+}
+
+/* Images */
+
 img{
-    max-width: 70%;
+    max-width: 70vw;
     height: auto;
 }
+
+/* Footer */
 
 #myFooter {
     align-content: space-between;
@@ -204,3 +216,61 @@ img{
     width: 100%;
     z-index: 2;
 }
+
+/* On smaller screens: hide certain items,
+   widen certain items. */
+@media only screen and (max-width: 1024px) {
+    #menu-btn {
+        display: none;
+    }
+    
+    #return-btn {
+        display: none;
+    }
+    
+    #mySideNav {
+        display: none;
+    }
+
+    .title {
+
+        max-width: 80vw;
+    }
+
+    .subtitle {
+        max-width: 80vw;
+    }
+
+    .text {
+        max-width: 60vw;
+    }
+
+    .spotify {
+        max-width: 80vw;
+    }
+}
+
+/* On mobile screens: downscale certain fonts. */
+@media only screen and (max-width: 480px) {
+    #myHeader {
+        font-size: 1.5rem
+    }
+    .title {
+        font-size: 1.25rem;        
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .text {
+        font-size: 0.8rem;
+    }
+
+}
+
+
+
+
+
+

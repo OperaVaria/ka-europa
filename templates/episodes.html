@@ -1,3 +1,33 @@
 {% extends "base.html" %}
 {% block body %}
+<div class="container">
+  <div class="item subtitle">
+    <h1>Évadok</h1>
+  </div>
+  <div class="container buttons">
+    <div class="item">
+      <button onclick="loadPage('/episodes/s1')">1. Évad</button>
+    </div>
+    <div class="item">
+      <button onclick="loadPage('/episodes/s2')">2. Évad</button>
+    </div>
+    <div class="item">
+      <button onclick="loadPage('/episodes/s3')">3. Évad</button>
+    </div>
+    <div class=break></div>
+    <div class="item">
+      <button onclick="loadPage('/episodes/s4')">4. Évad</button>
+    </div>
+    <div class="item">
+      <button onclick="loadPage('/episodes/s5')">5. Évad</button>
+    </div>
+    <div class=break></div>
+    <div class="item">
+      <button onclick="loadPage('/episodes/mono')">Monomotyorgások</button>
+    </div>
+    <div class="item fullwide padded">
+      <button onclick="loadPage('/')">Vissza</button>
+    </div>   
+  </div>
+</div>
 {% endblock body %}

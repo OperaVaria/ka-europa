@@ -19,7 +19,7 @@ function loadNewTab(Page) {
 
 // Resize the header's font size. Used with window.onscroll.
 function scrollFunction() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
     baseHeader.style.fontSize = "1rem";
   } else {
     baseHeader.style.fontSize = "2rem";
@@ -32,7 +32,7 @@ function toggleNav() {
     sideNav.style.width = "0";
     navOpen = false
   } else {    
-    sideNav.style.width = "15vw";
+    sideNav.style.width = "20vw";
     navOpen = true
   }
 }

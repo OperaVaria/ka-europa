@@ -32,6 +32,36 @@ def contact():
     """Set up contact page."""
     return render_template("contact.html")
 
+@app.route("/episodes/s1")
+def season_1():
+    """Set up season 1 page."""
+    return render_template("season1.html")
+
+@app.route("/episodes/s2")
+def season_2():
+    """Set up season 2 page."""
+    return render_template("season2.html")
+
+@app.route("/episodes/s3")
+def season_3():
+    """Set up season 3 page."""
+    return render_template("season3.html")
+
+@app.route("/episodes/s4")
+def season_4():
+    """Set up season 4 page."""
+    return render_template("season4.html")
+
+@app.route("/episodes/s5")
+def season_5():
+    """Set up season 5 page."""
+    return render_template("season5.html")
+
+@app.route("/episodes/mono")
+def season_mono():
+    """Set up mono episodes page."""
+    return render_template("mono.html")
+
 
 # When run as main run on localhost, port 8080:
 if __name__ == '__main__':
