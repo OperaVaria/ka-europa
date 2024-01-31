@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Ká-Európa Podcast</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon/favicon.ico') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+  <div id="myHeader">
+    <i id="menu-btn" class="bi bi-menu-down" onclick="toggleNav()">&#160;Menü</i>
+    <h1 id="head-title">Ká-Európa Podcast</h1>
+    <i id="return-btn" class="bi bi-house" onclick="loadPage('/')">&#160;Home</i>
+  </div>
+  <div id="mySidenav" class="sidenav">
+      <a href="/about">Rólunk</a>
+      <a href="/episodes">Epizódok</a>
+      <a href="/writings">Írások</a>
+      <a href="/contact">Kapcsolat</a>
+  </div>
+  {% block body %}{% endblock body %}
+  <footer id="myFooter">
+      <i class="bi bi-mailbox" onclick="loadNewTab('mailto:keuropapodcast@gmail.com')"></i>
+      <i class="bi bi-facebook" onclick="loadNewTab('https://www.facebook.com/keuropapodcast/')"></i>
+      <i class="bi bi-spotify" onclick="loadNewTab('https://open.spotify.com/show/0vA5gWANjc356HZweAOM6n')"></i>
+      <i class="bi bi-apple" onclick="loadNewTab('https://podcasts.apple.com/hu/podcast/k%C3%A1-eur%C3%B3pa-podcast/id1550114588')"></i>
+      <i class="bi bi-google" onclick="loadNewTab('https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy80OGRkOGY1NC9wb2RjYXN0L3Jzcw')"></i>
+  </footer>
+  <script src="{{ url_for('static', filename='js/mainScript.js') }}"></script> 
+</body>
+</html>

@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="container">
+  <div class="item fullwide">
+    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo">
+  </div>
+  <div class="item title">
+    <h1>Üdvözöljük a Ká-Európa Podcast weboldalán!</h1>  
+  </div>
+  <div class="item subtitle">
+    <h2>„Közép-európaiak vagyunk:<br>
+      az idegrendszerünk elrongyolt,<br>
+      a vécépapírunk kemény.“</h2>    
+  </div>
+  <div class="item fullwide">
+    <h3>/Esterházy Péter/</h3>
+  </div>
+  <div class=break></div>
+  <div class="item">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Suspendisse non facilisis dui.
+      Duis sit amet tortor tristique, lacinia est vel, ultricies velit.
+      Vestibulum fermentum turpis dolor, in ornare mi luctus sed. Quisque finibus ipsum sed vestibulum vehicula.
+      Proin tincidunt ligula imperdiet venenatis imperdiet. Aenean justo arcu, porttitor sit amet pharetra nec, vestibulum ut lectus.
+      Suspendisse potenti. Etiam eget consectetur diam. Vivamus cursus lacinia leo vel tempor. </p>
+  </div>
+  <div class=break></div>
+    <div class="container padded buttons">
+    <div class="item">
+      <button onclick="loadPage('/about')">Rólunk</button>
+    </div>
+    <div class="item">
+      <button onclick="loadPage('/episodes')">Epizódok</button>
+    </div>
+    <div class="item">
+      <button onclick="loadPage('/writings')">Írások</button>
+    </div>
+    <div class="item">
+      <button onclick="loadPage('/contact')">Kapcsolat</button>
+    </div>
+  </div>
+  <div class="item fullwide">
+    <h2 class=padded>Legutóbbi epizód:</h2>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/4b9jeWwKJAZP1hd3iAFqXw?utm_source=generator" 
+      width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy"></iframe>
+  </div>
+</div>
+{% endblock %}
