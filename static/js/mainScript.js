@@ -5,9 +5,6 @@ const rightNav = document.getElementById("sideNavRight");
 var leftNavOpen = false;
 var rightNavOpen = false;
 
-// Call function when scrolling. 
-window.onscroll = function() {scrollFunction()};
-
 // Insert current year into copyright info.
 let currentYear = new Date().getFullYear();
 document.getElementById("yearVariable").innerHTML = currentYear
@@ -20,15 +17,6 @@ function loadPage(Page) {
 // Load a page in new tab.
 function loadNewTab(Page) {
   window.open(Page, "_blank");
-}
-
-// Resize the header's font size. Used with window.onscroll.
-function scrollFunction() {
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    siteHeader.style.fontSize = "1rem";
-  } else {
-    siteHeader.style.fontSize = "2rem";
-  }
 }
 
 // Toggle left sidenav visibility. Used for menu button.

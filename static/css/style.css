@@ -32,7 +32,7 @@ html {
     font-size: 2rem;
     font-weight: bold;    
     justify-content: space-around;
-    padding: 2.5vh;
+    padding: 2vh;
     position: fixed;
     top: 0;
     transition: 0.6s;
@@ -116,8 +116,8 @@ html {
     align-content: center;
     align-items: center;
     justify-content: center;
-    margin-bottom: 10vh;
-    margin-top: 10vh;
+    margin-bottom: 3vw;
+    margin-top: 3vw;
 }
 
 /* Container items */
