@@ -35,7 +35,7 @@ html {
     padding: 2.5vh;
     position: fixed;
     top: 0;
-    transition: 0.4s;
+    transition: 0.6s;
     width: 100%;
     z-index: 2;
 }
