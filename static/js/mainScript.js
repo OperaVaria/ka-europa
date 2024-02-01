@@ -1,11 +1,16 @@
 // Variables:
-const baseHeader = document.getElementById("myHeader");
-const sideNav = document.getElementById("mySidenav");
-const baseFooter = document.getElementById("myFooter")
-var navOpen = false
+const siteHeader = document.getElementById("myHeader");
+const leftNav = document.getElementById("sideNavLeft");
+const rightNav = document.getElementById("sideNavRight");
+var leftNavOpen = false;
+var rightNavOpen = false;
 
 // Call function when scrolling. 
 window.onscroll = function() {scrollFunction()};
+
+// Insert current year into copyright info.
+let currentYear = new Date().getFullYear();
+document.getElementById("yearVariable").innerHTML = currentYear
 
 // Load a page, same tab.
 function loadPage(Page) {
@@ -20,19 +25,30 @@ function loadNewTab(Page) {
 // Resize the header's font size. Used with window.onscroll.
 function scrollFunction() {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    baseHeader.style.fontSize = "1rem";
+    siteHeader.style.fontSize = "1rem";
   } else {
-    baseHeader.style.fontSize = "2rem";
+    siteHeader.style.fontSize = "2rem";
   }
 }
 
-// Toggle sidenav visibility. Used for menu button.
-function toggleNav() {
-  if (navOpen) {    
-    sideNav.style.width = "0";
-    navOpen = false
+// Toggle left sidenav visibility. Used for menu button.
+function toggleNavLeft() {
+  if (leftNavOpen) {    
+    leftNav.style.width = "0";
+    leftNavOpen = false
   } else {    
-    sideNav.style.width = "20vw";
-    navOpen = true
+    leftNav.style.width = "15vw";
+    leftNavOpen = true
+  }
+}
+
+// Toggle right sidenav visibility. Used for info button.
+function toggleNavRight() {
+  if (rightNavOpen) {    
+    rightNav.style.width = "0";
+    rightNavOpen = false
+  } else {    
+    rightNav.style.width = "15vw";
+    rightNavOpen = true
   }
 }

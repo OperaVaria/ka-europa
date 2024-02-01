@@ -11,23 +11,29 @@
 </head>
 <body>
   <div id="myHeader">
-    <i id="menu-btn" class="bi bi-menu-down" onclick="toggleNav()">&#160;Menü</i>
-    <h1 id="head-title">Ká-Európa Podcast</h1>
-    <i id="return-btn" class="bi bi-house" onclick="loadPage('/')">&#160;Home</i>
+    <span id="menu-btn" class="bi bi-menu-down" onclick="toggleNavLeft()">&#160;&hairsp;Menü</span>
+    <span id="head-title" onclick="loadPage('/')">Ká-Európa Podcast</span>
+    <span id="info-btn" class="bi bi-info-circle" onclick="toggleNavRight()">&#160;&hairsp;Info</span>
   </div>
-  <div id="mySidenav" class="sidenav">
+  <div id="sideNavLeft" class="sidenav left">
+      <a href="/">Főoldal</a>
       <a href="/about">Rólunk</a>
       <a href="/episodes">Epizódok</a>
       <a href="/writings">Írások</a>
       <a href="/contact">Kapcsolat</a>
   </div>
+  <div id="sideNavRight" class="sidenav right">
+    <p>&copy Ká-Európa,</p>
+    <p id="yearVariable"></p>
+  </div>
+</div>
   {% block body %}{% endblock body %}
   <footer id="myFooter">
-      <i class="bi bi-mailbox" onclick="loadNewTab('mailto:keuropapodcast@gmail.com')"></i>
-      <i class="bi bi-facebook" onclick="loadNewTab('https://www.facebook.com/keuropapodcast/')"></i>
-      <i class="bi bi-spotify" onclick="loadNewTab('https://open.spotify.com/show/0vA5gWANjc356HZweAOM6n')"></i>
-      <i class="bi bi-apple" onclick="loadNewTab('https://podcasts.apple.com/hu/podcast/k%C3%A1-eur%C3%B3pa-podcast/id1550114588')"></i>
-      <i class="bi bi-google" onclick="loadNewTab('https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy80OGRkOGY1NC9wb2RjYXN0L3Jzcw')"></i>
+      <span class="bi bi-mailbox" onclick="loadNewTab('mailto:keuropapodcast@gmail.com')"></span>
+      <span class="bi bi-facebook" onclick="loadNewTab('https://www.facebook.com/keuropapodcast/')"></span>
+      <span class="bi bi-spotify" onclick="loadNewTab('https://open.spotify.com/show/0vA5gWANjc356HZweAOM6n')"></span>
+      <span class="bi bi-apple" onclick="loadNewTab('https://podcasts.apple.com/hu/podcast/k%C3%A1-eur%C3%B3pa-podcast/id1550114588')"></span>
+      <span class="bi bi-google" onclick="loadNewTab('https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy80OGRkOGY1NC9wb2RjYXN0L3Jzcw')"></span>
   </footer>
   <script src="{{ url_for('static', filename='js/mainScript.js') }}"></script> 
 </body>
