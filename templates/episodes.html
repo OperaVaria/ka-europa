@@ -1,33 +1,36 @@
+<!-- Podcast season selection page -->
 {% extends "base.html" %}
 {% block body %}
-<div class="container">
-  <div class="item subtitle">
+<!-- Horizontal container for title and buttons.
+     Title, 3 buttons, 2 buttons, 1 button, return button. -->
+<div class="container horizontal">
+  <div class="item subtitle padded">
     <h1>Évadok</h1>
   </div>
-  <div class="container buttons">
-    <div class="item">
-      <button onclick="loadPage('/episodes/s1')">1. Évad</button>
-    </div>
-    <div class="item">
-      <button onclick="loadPage('/episodes/s2')">2. Évad</button>
-    </div>
-    <div class="item">
-      <button onclick="loadPage('/episodes/s3')">3. Évad</button>
-    </div>
-    <div class=break></div>
-    <div class="item">
-      <button onclick="loadPage('/episodes/s4')">4. Évad</button>
-    </div>
-    <div class="item">
-      <button onclick="loadPage('/episodes/s5')">5. Évad</button>
-    </div>
-    <div class=break></div>
-    <div class="item">
-      <button onclick="loadPage('/episodes/mono')">Monomotyorgások</button>
-    </div>
-    <div class="item fullwide">
-      <button onclick="loadPage('/')">Vissza</button>
-    </div>   
+  <div class=break></div>
+  <div class="item">
+    <button onclick="loadPage('/episodes/s1')">1. Évad</button>
+  </div>
+  <div class="item">
+    <button onclick="loadPage('/episodes/s2')">2. Évad</button>
+  </div>
+  <div class="item">
+    <button onclick="loadPage('/episodes/s3')">3. Évad</button>
+  </div>
+  <div class=break></div>
+  <div class="item">
+    <button onclick="loadPage('/episodes/s4')">4. Évad</button>
+  </div>
+  <div class="item">
+    <button onclick="loadPage('/episodes/s5')">5. Évad</button>
+  </div>
+  <div class=break></div>
+  <div class="item">
+    <button onclick="loadPage('/episodes/mono')">Monomotyorgások</button>
+  </div>
+  <div class=break></div>
+  <div class="item padded">
+    <button onclick="loadPage('/')">Vissza</button>
   </div>
 </div>
 {% endblock body %}

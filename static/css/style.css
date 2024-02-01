@@ -31,7 +31,7 @@ html {
     display: flex;
     font-size: 2rem;
     font-weight: bold;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding: 2vh;
     position: fixed;
     top: 0;
@@ -41,18 +41,18 @@ html {
 }
 
 #menu-btn {
+    flex: 1;
     font-size: 0.75em;
-    margin-left: 1vw;
 }
 
 #head-title {
-    flex: 1;
+    flex: 6;
     font-size: 1.5em;
 }
 
 #info-btn {
+    flex: 1;
     font-size: 0.75em;
-    margin-right: 1vw;
 }
 
 /* Side menus */
@@ -78,6 +78,8 @@ html {
     right: 0;
 }
 
+/* Side menu items */
+
 .sidenav a {
     color: #7D7D7D;
     display: block;
@@ -94,7 +96,7 @@ html {
 .sidenav p {
     color: #7D7D7D;
     display: block;
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 1vh;
     text-decoration: none;
 }
@@ -105,19 +107,19 @@ html {
     align-content: space-around;
     align-items: center;
     display: flex;
-    flex-wrap: wrap;
-    gap: 2vh 1vw;
-    justify-content: space-around;
+    justify-content: center;
     margin-bottom: 12.5vh;
     margin-top: 12.5vh;
 }
 
-.buttons {
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 2.5vw;
-    margin-top: 2.5vw;
+.horizontal {
+    flex-flow: row wrap;
+    gap: 1vh 1.5vw;
+}
+
+.vertical {
+    flex-flow: column wrap;
+    gap: 4vh 2vw;
 }
 
 /* Container items */
@@ -127,7 +129,6 @@ html {
 }
 
 .title {
-    flex: 100%;
     font-size: 1.5rem;
     font-style: normal;
     font-weight: normal;
@@ -135,7 +136,6 @@ html {
 }
 
 .subtitle {
-    flex: 100%;
     font-size: 1.2rem;
     font-style: italic;
     font-weight: normal;
@@ -150,12 +150,7 @@ html {
 }
 
 .spotify {
-    flex: 100%;
-    max-width: 60vw;
-}
-
-.fullwide {
-    flex: 100%;
+    width: 50vw;
 }
 
 .padded {
@@ -176,14 +171,13 @@ html {
 button {
     background-color: #A24611;
     border: none;
-    border-radius: 0.2em;
+    border-radius: 0.3em;
     color: #EBEBEB;
     cursor: pointer;
-    display: inline-block;
-    font-size: 1rem;
-    margin: 1vh 1vw;
+    font-size: 1em;
     opacity: 0.6;
-    padding: 1.5em 4em;
+    height: 3em;
+    width: 10em;
     text-align: center;
     text-decoration: none;
     transition: 0.3s;
@@ -194,7 +188,7 @@ button:hover {
     transition: 0.3s;
 }
 
-/* Color change animation for bootstrap icons */
+/* Color change animation for clickable icons and text. */
 
 span {
     cursor: pointer;
@@ -216,7 +210,7 @@ img{
 /* Footer */
 
 #myFooter {
-    align-content: space-between;
+    align-content: space-around;
     align-items: center;
     background-color: #111111;
     color: #EBEBEB;
@@ -232,34 +226,33 @@ img{
     z-index: 2;
 }
 
-/* On smaller screens: hide certain items,
-   widen certain items. */
+/* On smaller screens: downscale header, resize Spotify embeds. */
 @media only screen and (max-width: 1024px) {
-    #menu-btn {
-        display: none;
+    #myHeader {
+        font-size: 1.75rem
     }
 
-    #info-btn {
-        display: none;
-    }
-
-    #SideNavLeft {
-        display: none;
-    }
-
-    #SideNavRight {
-        display: none;
+    .spotify {
+        width: 80vw;
     }
 }
 
-/* On mobile screens: downscale certain fonts. */
+/* On mobile screens: downscale most fonts. */
 @media only screen and (max-width: 480px) {
     #myHeader {
-        font-size: 1.5rem
+        font-size: 1.3rem
+    }
+
+    .sidenav a {
+        font-size: 1rem;
+    }
+
+    .sidenav p {
+        font-size: 0.8rem;
     }
 
     .title {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
     }
 
     .subtitle {
@@ -269,4 +262,5 @@ img{
     .text {
         font-size: 0.8rem;
     }
+
 }

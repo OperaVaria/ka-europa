@@ -1,4 +1,13 @@
+<!-- Writings page -->
 {% extends "base.html" %}
 {% block body %}
-<h1>Próba5</h1>
-{% endblock %}
+<div class="container vertical">
+  <div class="item subtitle padded">
+    <h1>Írások</h1>
+  </div>
+  <!-- Insert content here -->
+  <div class="item padded">
+    <button onclick="loadPage('/episodes')">Vissza</button>
+  </div>
+</div>
+{% endblock body %}

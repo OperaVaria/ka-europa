@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Contains base elements that are displayed on all pages. -->
 <html lang="en">
 <head>
   <title>Ká-Európa Podcast</title>
@@ -7,14 +8,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="{{ url_for('static', filename='favicon/favicon.ico') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <!-- Using bootstrap icons. -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
+  <!-- Fixed header with title and menu buttons. -->
   <div id="myHeader">
     <span id="menu-btn" class="bi bi-menu-down" onclick="toggleNavLeft()">&#160;&hairsp;Menü</span>
     <span id="head-title" onclick="loadPage('/')">Ká-Európa Podcast</span>
     <span id="info-btn" class="bi bi-info-circle" onclick="toggleNavRight()">&#160;&hairsp;Info</span>
   </div>
+  <!-- Left menu: navigation.-->
   <div id="sideNavLeft" class="sidenav left">
       <a href="/">Főoldal</a>
       <a href="/about">Rólunk</a>
@@ -22,12 +26,14 @@
       <a href="/writings">Írások</a>
       <a href="/contact">Kapcsolat</a>
   </div>
+  <!-- Right menu: website information. -->
   <div id="sideNavRight" class="sidenav right">
     <p>&copy Ká-Európa,</p>
     <p id="yearVariable"></p>
   </div>
-</div>
+  <!-- Jinja2 nesting -->
   {% block body %}{% endblock body %}
+  <!-- Fixed footer with clickable icons to most importaint links. -->
   <footer id="myFooter">
       <span class="bi bi-mailbox" onclick="loadNewTab('mailto:keuropapodcast@gmail.com')"></span>
       <span class="bi bi-facebook" onclick="loadNewTab('https://www.facebook.com/keuropapodcast/')"></span>
@@ -35,6 +41,7 @@
       <span class="bi bi-apple" onclick="loadNewTab('https://podcasts.apple.com/hu/podcast/k%C3%A1-eur%C3%B3pa-podcast/id1550114588')"></span>
       <span class="bi bi-google" onclick="loadNewTab('https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy80OGRkOGY1NC9wb2RjYXN0L3Jzcw')"></span>
   </footer>
-  <script src="{{ url_for('static', filename='js/mainScript.js') }}"></script> 
+  <!-- Javascript file. -->
+  <script src="{{ url_for('static', filename='js/mainScript.js') }}"></script>
 </body>
 </html>
