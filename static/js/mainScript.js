@@ -29,7 +29,7 @@ function toggleNavLeft() {
     if (mq.matches) {
       leftNav.style.width = "15vw";
     } else {
-      leftNav.style.width = "50vw";
+      leftNav.style.width = "40vw";
     }
     leftNavOpen = true;
   }
@@ -44,7 +44,7 @@ function toggleNavRight() {
     if (mq.matches) {
       rightNav.style.width = "15vw";
     } else {
-      rightNav.style.width = "50vw";
+      rightNav.style.width = "40vw";
     }
     rightNavOpen = true;
   }
