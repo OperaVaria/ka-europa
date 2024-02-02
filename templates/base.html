@@ -14,9 +14,9 @@
 <body>
   <!-- Fixed header with title and menu buttons. -->
   <div id="myHeader">
-    <span id="menu-btn" class="bi bi-menu-down" onclick="toggleNavLeft()">&#160;&hairsp;Menü</span>
+    <span id="menu-btn" class="bi bi-menu-down" onclick="toggleNavLeft()"><br>Menü</span>
     <span id="head-title" onclick="loadPage('/')">Ká-Európa Podcast</span>
-    <span id="info-btn" class="bi bi-info-circle" onclick="toggleNavRight()">&#160;&hairsp;Info</span>
+    <span id="info-btn" class="bi bi-info-circle" onclick="toggleNavRight()"><br>Info</span>
   </div>
   <!-- Left menu: navigation.-->
   <div id="sideNavLeft" class="sidenav left">
@@ -28,8 +28,12 @@
   </div>
   <!-- Right menu: website information. -->
   <div id="sideNavRight" class="sidenav right">
-    <p>&copy Ká-Európa,</p>
-    <p id="yearVariable"></p>
+    <p>A műsorban elhangzottak a nyugalom megzavarására alkalmasak, hallgatását semmilyen korosztálynak nem ajánljuk.</p>
+    <p>A podcastet szuverenitásellenes külföldi ágensek nem támogatják. Bár egyszer kaptunk 30 ezer forintot valakitől. Ha az Soros volt, akkor bocs.</p>
+    <p>A weboldalt készítette: Latosinszky Csaba. Az illusztrációk Vida Bence munkái.</p>
+    <p>A weboldal a bootstrap ikon csomagot használja, MIT licenc alapján.
+       Forrás: <span class="bi bi-bootstrap" onclick="loadNewTab('https://icons.getbootstrap.com/')"></span></p>
+    <p>&copy Ká-Európa Podcast,&#160;<span id="yearVariable"></span></p>
   </div>
   <!-- Jinja2 nesting -->
   {% block body %}{% endblock body %}
