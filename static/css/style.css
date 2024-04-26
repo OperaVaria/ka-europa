@@ -1,20 +1,23 @@
 /* CSS for "Ká-Europa podcast" page (custom) */
 
-/* Global */
+/* Root element (for global font settings) */
 html {
+    color: #111111;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: calc(15px + 0.390625vw);
+    text-align: center;
+}
+
+/* Background */
+body {
     background-attachment: fixed;
     background-color: #EBD1B0;
     background-position: top left;
     background-repeat: no-repeat;
-    color: #111111;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: calc(15px + 0.390625vw);
-    font-style: normal;
-    font-weight: normal;
-    text-align: center;
+
 }
 
-/* All CSS items */
+/* All CSS items (avoid margin errors) */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -29,7 +32,7 @@ html {
     background-color: #111111;
     color: #EBEBEB;
     display: flex;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     justify-content: center;
     padding: 2vh 0;
@@ -40,18 +43,13 @@ html {
     z-index: 2;
 }
 
-#menu-btn {
-    font-size: 0.75em;
-    width: 15vw;
-}
-
 #head-title {
-    font-size: 1.5em;
+    font-size: 2em;
     width: 70vw;
 }
 
-#info-btn {
-    font-size: 0.75em;
+#menu-btn, #info-btn  {
+    font-size: 1em;
     width: 15vw;
 }
 
@@ -83,7 +81,7 @@ html {
 .sidenav a {
     color: #7D7D7D;
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     padding: 1vh 0;
     text-decoration: none;
 }
@@ -96,7 +94,7 @@ html {
 .sidenav p {
     color: #7D7D7D;
     display: block;
-    font-size: 0.75rem;
+    font-size: 0.75em;
     padding: 1vh 0.5vw;
     text-decoration: none;
 }

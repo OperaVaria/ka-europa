@@ -1,13 +1,13 @@
 <!-- About page -->
 {% extends "base.html" %}
 {% block body %}
-<div class="container vertical">
-  <div class="item subtitle padded">
+<main class="container vertical">
+  <div class="item subtitle padded" role="none">
     <h1>Rólunk</h1>
   </div>
   <!-- Insert content here -->
-  <div class="item padded">
-    <button onclick="loadPage('/episodes')">Vissza</button>
-  </div>
-</div>
+  <nav class="item padded" title="Gombok">
+    <button class="same-tab-btn" data-target="/episodes">Vissza</button>
+  </nav>
+</main>
 {% endblock body %}

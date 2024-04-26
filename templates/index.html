@@ -2,50 +2,50 @@
 {% extends "base.html" %}
 {% block body %}
 <!-- Vertical container for title and text elements. -->
-<div class="container vertical">
-  <div class="item">
+<main class="container vertical">
+  <div class="item" role="none">
     <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo">
   </div>
-  <div class="item title">
+  <div class="item title" role="none">
     <h1>Üdvözöljük a Ká-Európa Podcast weboldalán!</h1>
   </div>
-  <div class="item subtitle">
+  <div class="item subtitle" role="none">
     <h2><i><q>Közép-európaiak vagyunk:<br>
       az idegrendszerünk elrongyolt,<br>
       a vécépapírunk kemény.</q></i></h2>
   </div>
-  <div class="item">
+  <div class="item" role="none">
     <h3>/Esterházy Péter/</h3>
   </div>
   <!-- Welcome text. -->
-  <div class="item text">
+  <article class="item text">
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       Suspendisse non facilisis dui.
       Duis sit amet tortor tristique, lacinia est vel, ultricies velit.
       Vestibulum fermentum turpis dolor, in ornare mi luctus sed. Quisque finibus ipsum sed vestibulum vehicula.
       Proin tincidunt ligula imperdiet venenatis imperdiet. Aenean justo arcu, porttitor sit amet pharetra nec, vestibulum ut lectus.
       Suspendisse potenti. Etiam eget consectetur diam. Vivamus cursus lacinia leo vel tempor.</p>
-  </div>
-</div>
+  </article>
+</main>
 <!-- Horizontal container for button rows and latest episode item. -->
-<div class="container horizontal">
-  <div class="item">
-    <button onclick="loadPage('/about')">Rólunk  </button>
+<nav class="container horizontal" title="Gombok">
+  <div class="item" role="none">
+    <button class="same-tab-btn" data-target="/about">Rólunk  </button>
   </div>
-  <div class="item">
-    <button onclick="loadPage('/episodes')">Epizódok</button>
+  <div class="item" role="none">
+    <button class="same-tab-btn" data-target="/episodes">Epizódok</button>
   </div>
-  <div class="item">
-    <button onclick="loadPage('/writings')">Írások</button>
+  <div class="item" role="none">
+    <button class="same-tab-btn" data-target="/writings">Írások</button>
   </div>
-  <div class="item">
-    <button onclick="loadPage('/contact')">Kapcsolat</button>
+  <div class="item" role="none">
+    <button class="same-tab-btn" data-target="/contact">Kapcsolat</button>
   </div>
   <div class=break></div>
-  <div class="item spotify padded">
+  <article class="item spotify padded">
     <h2 class="padded">Legutóbbi epizód:</h2>
     <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/0vA5gWANjc356HZweAOM6n?utm_source=generator" width="100%" height="152"
     frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-  </div>
-</div>
+  </article>
+</nav>
 {% endblock %}
