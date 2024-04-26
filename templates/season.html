@@ -1,9 +1,9 @@
-<!-- List of solo episodes. -->
+<!-- Season episode list. -->
 {% extends "base.html" %}
 {% block body %}
 <main class="container vertical">
   <div class="item subtitle padded" role="none">
-    <h1>Monomotyorgások</h1>
+    <h1>{{season_number}}. Évad</h1>
   </div>
   {% for episode in episode_list %}
   <details>
