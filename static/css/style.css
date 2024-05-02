@@ -263,7 +263,8 @@ img{
 }
 
 .spotify {
-    border-radius: 12px
+    border-radius: 12px;
+    border: 0;
 }
 
 /* Footer */
@@ -288,7 +289,7 @@ img{
 /* On smaller screens: downscale header, resize Spotify embeds. */
 @media only screen and (max-width: 1024px) {
     .header {
-        font-size: 1.75rem
+        font-size: 1.75rem;
         padding: 2vh 0;
     }
 
