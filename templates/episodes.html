@@ -3,11 +3,11 @@
 {% block body %}
 <!-- Horizontal container for title and buttons.
      Title, 3 buttons, 2 buttons, 1 button, return button. -->
-<main class="container horizontal">
+<main class="container horizontal" aria-labelledby="page-title">
   <div class="item subtitle padded" role="none">
-    <h1>Évadok</h1>
+    <h1 id="page-title">Évadok</h1>
   </div>
-  <div class=break></div>
+  <div class=break role="none"></div>
   <div class="item" role="none">
     <button class="same-tab-btn" data-target="/episodes/s1">1. Évad</button>
   </div>
@@ -17,19 +17,19 @@
   <div class="item" role="none">
     <button class="same-tab-btn" data-target="/episodes/s3">3. Évad</button>
   </div>
-  <div class=break></div>
+  <div class=break role="none"></div>
   <div class="item" role="none">
     <button class="same-tab-btn" data-target="/episodes/s4">4. Évad</button>
   </div>
   <div class="item" role="none">
     <button class="same-tab-btn" data-target="/episodes/s5">5. Évad</button>
   </div>
-  <div class=break></div>
+  <div class=break role="none"></div>
   <div class="item" role="none">
-    <button class="same-tab-btn" data-target="/episodes/mono">Monomotyorgások</button>
+    <button class="same-tab-btn" data-target="/episodes/specials">Különkiadások</button>
   </div>
-  <div class=break></div>
-  <nav class="item padded" title="Gombok">
+  <div class=break role="none"></div>
+  <nav class="item padded" title="Navigációs gombok">
     <button class="same-tab-btn" data-target="/">Vissza</button>
   </nav>
 </main>

@@ -8,7 +8,7 @@ Part of the "Ká-Európa Podcast website" project by OperaVaria.
 
 # Imports:
 import sqlite3
-from episode_class import Episode
+from db.episode_class import Episode
 
 
 def get_episode_list(season):

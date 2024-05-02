@@ -1,9 +1,9 @@
-<!-- Season episode list. -->
+<!-- List of special episodes. -->
 {% extends "base.html" %}
 {% block body %}
 <main class="container vertical" aria-labelledby="page-title">
   <div class="item subtitle padded" role="none">
-    <h1 id="page-title">{{season_number}}. Évad</h1>
+    <h1 id="page-title">Különkiadások</h1>
   </div>
   {% for episode in episode_list %}
   <details class="item subtitle" title="{{episode.title}}">

@@ -7,10 +7,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta
-  name="description"
-  content="Politikai-közéleti rehabilitációs gyakorlatok négy budapesti polgártól. A helyszín egy alagsor, a vélemény szabad, a koncepció minimális."
-  />
+  <meta name="description"
+  content="Politikai-közéleti rehabilitációs gyakorlatok négy budapesti polgártól.
+  A helyszín egy alagsor, a vélemény szabad, a koncepció minimális."/>
   <!-- Favicon. -->
   <link rel="shortcut icon" href="{{ url_for('static', filename='favicon/favicon.ico') }}">
   <!-- Main stylesheet. -->
@@ -20,13 +19,16 @@
 </head>
 <body>
   <!-- Fixed header with title and menu buttons. -->
-  <header id="myHeader">
-    <span id="menu-btn" class="bi bi-menu-down"><br>Menü</span>
-    <span id="head-title" class="same-tab-btn" data-target="/">Ká-Európa Podcast</span>
-    <span id="info-btn" class="bi bi-info-circle"><br>Info</span>
+  <header class="header" title="Fejléc">
+    <span id="menu-btn" class="bi bi-menu-down anim" role="button"
+    title="Menü gomb"><br role="none">Menü</span>
+    <span id="head-title" class="same-tab-btn anim" data-target="/"
+    role="link">Ká-Európa Podcast</span>
+    <span id="info-btn" class="bi bi-info-circle anim" role="button"
+    title="Info gomb"><br role="none">Info</span>
   </header>
   <!-- Left menu: navigation.-->
-  <nav id="sideNavLeft" class="sidenav left" title="Navigáció">
+  <nav id="side-menu-left" class="sidemn left" title="Navigációs linkek">
       <a href="/">Főoldal</a>
       <a href="/about">Rólunk</a>
       <a href="/episodes">Epizódok</a>
@@ -34,23 +36,36 @@
       <a href="/contact">Kapcsolat</a>
   </nav>
   <!-- Right menu: website information. -->
-  <nav id="sideNavRight" class="sidenav right" title="Információ">
-    <p>A műsorban elhangzottak a nyugalom megzavarására alkalmasak, hallgatását semmilyen korosztálynak nem ajánljuk.</p>
-    <p>A podcastot szuverenitásellenes külföldi ágensek nem támogatják. Bár egyszer kaptunk 30 ezer forintot valakitől. Ha az Soros volt, akkor elnézést.</p>
-    <p>A weboldalt készítette: Latosinszky Csaba. Az illusztrációk Vida Bence munkái.</p>
+  <aside id="side-menu-right" class="sidemn right" title="Információ">
+    <p>A műsorban elhangzottak a nyugalom megzavarására alkalmasak,
+    hallgatását semmilyen korosztálynak nem ajánljuk.</p>
+    <p>A podcastot szuverenitásellenes külföldi ágensek nem támogatják.
+    Bár egyszer kaptunk 30 ezer forintot valakitől. Ha az Soros volt, akkor elnézést.</p>
+    <p>A weboldalt készítette: Lato&shy;sinszky Csaba.
+    Az illusztrációk Vida Bence munkái.</p>
     <p>A weboldal a bootstrap ikon-csomagot használja, MIT licenc alapján.
-       Forrás: <span class="bi bi-bootstrap new-tab-btn" data-target="https://icons.getbootstrap.com/"></span></p>
+    Forrás: <span class="bi bi-bootstrap new-tab-btn anim white"
+    data-target="https://icons.getbootstrap.com/" role="button"></span></p>
+    <p>A totális transparencia kedvéért az oldal forráskódja elérhető itt:
+    <span class="bi bi-github new-tab-btn anim white"
+    data-target="https://github.com/OperaVaria/ka-europa"
+    role="button"></span></p>
     <p>&copy Ká-Európa Podcast, {{current_year}}</p>
-  </nav>
+  </aside>
   <!-- Jinja2 nesting -->
   {% block body %}{% endblock body %}
   <!-- Fixed footer with clickable icons to most important links. -->
-  <footer id="myFooter" title="Linkek">
-    <span class="bi bi-mailbox new-tab-btn" data-target="mailto:keuropapodcast@gmail.com"></span>
-    <span class="bi bi-facebook new-tab-btn" data-target="https://www.facebook.com/keuropapodcast/"></span>
-    <span class="bi bi-spotify new-tab-btn" data-target="https://open.spotify.com/show/0vA5gWANjc356HZweAOM6n"></span>
-    <span class="bi bi-apple new-tab-btn" data-target="https://podcasts.apple.com/hu/podcast/k%C3%A1-eur%C3%B3pa-podcast/id1550114588"></span>
-    <span class="bi bi-google new-tab-btn" data-target="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy80OGRkOGY1NC9wb2RjYXN0L3Jzcw"></span>
+  <footer class="footer" title="Külső linkek">
+    <span class="bi bi-mailbox new-tab-btn anim" title="E-mail" role="button"
+    data-target="mailto:keuropapodcast@gmail.com"></span>
+    <span class="bi bi-facebook new-tab-btn anim" title="Facebook" role="button"
+    data-target="https://www.facebook.com/keuropapodcast/"></span>
+    <span class="bi bi-spotify new-tab-btn anim" title="Spotify" role="button"
+    data-target="https://open.spotify.com/show/0vA5gWANjc356HZweAOM6n"></span>
+    <span class="bi bi-apple new-tab-btn anim" title="Apple Podcasts" role="button"
+    data-target="https://podcasts.apple.com/hu/podcast/k%C3%A1-eur%C3%B3pa-podcast/id1550114588" ></span>
+    <span class="bi bi-google new-tab-btn anim" title="Google Podcasts" role="button"
+    data-target="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy80OGRkOGY1NC9wb2RjYXN0L3Jzcw"></span>
   </footer>
   <!-- Javascript file. -->
   <script src="{{ url_for('static', filename='js/mainScript.js') }}"></script>

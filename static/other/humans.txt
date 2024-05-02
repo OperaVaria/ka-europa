@@ -1,11 +1,11 @@
 /* TEAM */
     Members: János Hódsági, Csaba Latosinszky, Emánuel Pauer, Bence Vida
         Contact: keuropapodcast@gmail.com
-            
+
     Website by: Csaba Latosinszky (OperaVaria)
         Contact: lcs_it@proton.me
 
 /* SITE */
-    Last update: 2024/04/27
+    Last update: 2024/05/02
     Language: Hungarian
     Standards: HTML5, CSS3, ES14, Python 3.10

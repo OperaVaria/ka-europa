@@ -7,11 +7,14 @@ bypass = ["robots_txt", "humans_txt", "sitemap_xml"]
 csp = {
     "default-src": ["'none'"],
     "connect-src": ["'self'"],
-    "script-src": [
+    "script-src": ["'self'"],
+    "style-src": [
         "'self'",
+        "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/",
     ],
-    "style-src": ["'self'"],
     "img-src": ["'self'"],
+    "frame-src": ["https://open.spotify.com/"],
+    "font-src": ["https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/"],
     "object-src": ["'none'"],
     "base-uri": ["'none'"],
     "form-action": ["'self'"],

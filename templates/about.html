@@ -1,13 +1,16 @@
 <!-- About page -->
 {% extends "base.html" %}
 {% block body %}
-<main class="container vertical">
+<main class="container vertical" aria-labelledby="page-title">
   <div class="item subtitle padded" role="none">
-    <h1>Rólunk</h1>
+    <h1 id="page-title">Rólunk</h1>
   </div>
+  <section class="item subtitle" title="Figyelmeztetés">
+    <h2>Hamarosan!</h2>
+  </section>
   <!-- Insert content here -->
-  <nav class="item padded" title="Gombok">
-    <button class="same-tab-btn" data-target="/episodes">Vissza</button>
+  <nav class="item padded" title="Navigációs gombok">
+    <button class="same-tab-btn" data-target="/">Vissza</button>
   </nav>
 </main>
 {% endblock body %}

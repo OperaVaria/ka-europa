@@ -1,12 +1,12 @@
 // Variables:
-const siteHeader = document.getElementById("myHeader");
-const leftNav = document.getElementById("sideNavLeft");
-const rightNav = document.getElementById("sideNavRight");
+const leftMenu = document.getElementById("side-menu-left");
+const rightMenu = document.getElementById("side-menu-right");
 const menuBtn = document.getElementById("menu-btn");
 const infoBtn = document.getElementById("info-btn");
+const details = document.querySelector("details");
 const mq = window.matchMedia("(min-width: 1024px)");
-var leftNavOpen = false;
-var rightNavOpen = false;
+var leftMenuOpen = false;
+var rightMenuOpen = false;
 
 // Add event listeners:
 
@@ -24,19 +24,34 @@ document.querySelectorAll(".new-tab-btn").forEach((btn) => {
   });
 });
 
-// Left sideNav button.
+// Left side menu button.
 if (menuBtn) {
   menuBtn.addEventListener("click", () => {
-    toggleNavLeft();
+    toggleMenuLeft();
   });
 }
 
-// Right sideNav button.
+// Right side menu button.
 if (infoBtn) {
   infoBtn.addEventListener("click", () => {
-    toggleNavRight();
+    toggleMenuRight();
   });
 }
+
+// Details elements animation.
+details.addEventListener("click", (e) => {
+  if (details.hasAttribute("open")) {
+    e.preventDefault();
+    details.classList.add("closing");
+  }
+});
+
+details.addEventListener("animationend", (e) => {
+  if (e.animationName === "close") {
+    details.removeAttribute("open");
+    details.classList.remove("closing");
+  }
+});
 
 // Page opening functions:
 
@@ -50,32 +65,32 @@ function loadNewTab(Page) {
   window.open(Page, "_blank");
 }
 
-// Toggle left sidenav visibility. Used for menu button.
-function toggleNavLeft() {
-  if (leftNavOpen) {
-    leftNav.style.width = "0";
-    leftNavOpen = false;
+// Toggle left side menu visibility. Used for main menu button.
+function toggleMenuLeft() {
+  if (leftMenuOpen) {
+    leftMenu.style.width = "0";
+    leftMenuOpen = false;
   } else {
     if (mq.matches) {
-      leftNav.style.width = "15vw";
+      leftMenu.style.width = "20vw";
     } else {
-      leftNav.style.width = "40vw";
+      leftMenu.style.width = "45vw";
     }
-    leftNavOpen = true;
+    leftMenuOpen = true;
   }
 }
 
-// Toggle right sidenav visibility. Used for info button.
-function toggleNavRight() {
-  if (rightNavOpen) {
-    rightNav.style.width = "0";
-    rightNavOpen = false;
+// Toggle right side menu visibility. Used for info button.
+function toggleMenuRight() {
+  if (rightMenuOpen) {
+    rightMenu.style.width = "0";
+    rightMenuOpen = false;
   } else {
     if (mq.matches) {
-      rightNav.style.width = "15vw";
+      rightMenu.style.width = "20vw";
     } else {
-      rightNav.style.width = "40vw";
+      rightMenu.style.width = "45vw";
     }
-    rightNavOpen = true;
+    rightMenuOpen = true;
   }
 }

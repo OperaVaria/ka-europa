@@ -26,7 +26,7 @@ body {
 
 /* Header */
 
-#myHeader {
+.header {
     align-content: center;
     align-items: center;
     background-color: #111111;
@@ -35,27 +35,26 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
     justify-content: center;
-    padding: 2vh 0;
+    padding: 2.5vh 0;
     position: fixed;
     top: 0;
-    transition: 0.6s;
     width: 100%;
     z-index: 2;
 }
 
 #head-title {
     font-size: 2em;
-    width: 70vw;
+    width: 60vw;
 }
 
 #menu-btn, #info-btn  {
     font-size: 1em;
-    width: 15vw;
+    width: 20vw;
 }
 
 /* Side menus */
 
-.sidenav {
+.sidemn {
     background-color: #111111;
     height: 100%;
     opacity: 0.8;
@@ -78,7 +77,7 @@ body {
 
 /* Side menu items */
 
-.sidenav a {
+.sidemn a {
     color: #7D7D7D;
     display: block;
     font-size: 1.5em;
@@ -86,17 +85,25 @@ body {
     text-decoration: none;
 }
 
-.sidenav a:hover {
+.sidemn a:hover {
     color: #EBEBEB;
     transition: 0.5s;
 }
 
-.sidenav p {
+.sidemn p {
     color: #7D7D7D;
     display: block;
     font-size: 0.75em;
+    hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    margin: auto;
     padding: 1vh 0.5vw;
+    text-align: justify;
+    text-align-last: center;
     text-decoration: none;
+    width: 30ch;
 }
 
 /* Containers */
@@ -112,12 +119,17 @@ body {
 
 .horizontal {
     flex-flow: row wrap;
-    gap: 1vh 1.5vw;
+    gap: 1vh 1vw;
 }
 
 .vertical {
     flex-flow: column wrap;
-    gap: 4vh 2vw;
+    gap: 3vh 1.5vw;
+}
+
+.small-margin {
+    margin-bottom: 2vh;
+    margin-top: 2vh;
 }
 
 /* Container items */
@@ -134,18 +146,12 @@ body {
     max-width: 75vw;
 }
 
-.text {
-    max-width: 60vw;
-    text-align: justify;
-    text-decoration: none;
-}
-
-.spotify {
-    width: 50vw;
-}
-
 .padded {
     padding: 5vh 2.5vw;
+}
+
+.spotify-cont {
+    width: 40vw;
 }
 
 .break {
@@ -181,18 +187,44 @@ button:hover {
 
 /* Color change animation for clickable icons and text. */
 
-span {
+.anim {
     cursor: pointer;
     transition: 0.3s;
 }
 
-span:hover {
+.anim:hover {
     color: #7D7D7D;
     transition: 0.3s;
 }
 
-.bi-bootstrap:hover {
+.white:hover {
     color: #EBEBEB;
+}
+
+/* Detail element with animation*/
+
+summary {
+    font-weight: bold;
+    max-width: 50ch;
+    text-decoration: underline;
+}
+
+@keyframes open {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+@keyframes close {
+  0% { opacity: 1 }
+  100% { opacity: 0 }
+}
+
+details[open] summary~* {
+  animation: open 0.5s
+}
+
+details.closing summary~* {
+  animation: close 0.5s
 }
 
 /* Images */
@@ -202,9 +234,41 @@ img{
     max-width: 70vw;
 }
 
+/* Text and other */
+
+.body-text {
+    hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    max-width: 60vw;
+    text-align: justify;
+    text-align-last: center;
+    width: 60ch;
+}
+
+.info-text {
+    font-size: 0.9rem;
+    hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    max-width: 30vw;
+    text-align: justify;
+    text-align-last: center;
+}
+
+.spotify {
+    border-radius: 12px
+}
+
 /* Footer */
 
-#myFooter {
+.footer {
     align-content: space-around;
     align-items: center;
     background-color: #111111;
@@ -223,31 +287,28 @@ img{
 
 /* On smaller screens: downscale header, resize Spotify embeds. */
 @media only screen and (max-width: 1024px) {
-    #myHeader {
+    .header {
         font-size: 1.75rem
+        padding: 2vh 0;
     }
 
-    .spotify {
+    .spotify-cont {
         width: 80vw;
     }
 }
 
 /* On mobile screens: downscale some fonts, increase container margin. */
 @media only screen and (max-width: 480px) {
-    #myHeader {
-        font-size: 1.3rem
+    .header {
+        font-size: 1.25rem
     }
 
-    .sidenav a {
+    .sidemn a {
         font-size: 1rem;
     }
 
-    .sidenav p {
+    .sidemn p {
         font-size: 0.5rem;
     }
 
-    .container {
-        margin-bottom: 16vh;
-        margin-top: 16vh;
-    }
 }

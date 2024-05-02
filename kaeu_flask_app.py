@@ -3,14 +3,18 @@ kaeu_flask_app.py
 
 Main file of the "Ká-Európa Podcast website" project.
 
-Website for the "Ká-Európa" podcast, built as a Flask web app.
+Website for the "Ká-Európa" podcast. The frontend is a fairly regular, custom made,
+HTML-CSS-JS website, with a responsive, flexbox design. Basic accessibility
+features are implemented. The backend uses the Flask framework and its
+extensions (Talisman, Minify) for added functionality.
+
 """
 
 # Metadata variables:
 __author__ = "Csaba Latosinszky"
 __contact__ = "lcs_it@proton.me"
 __version__ = "1.0.0"
-__date__ = "2024.04.27"
+__date__ = "2024.05.02"
 
 # Licence:
 __license__ = "GPLv3"
@@ -100,17 +104,18 @@ def season(snum):
     # Fetch episode list for season.
     episode_list = get_episode_list(snum)
     return render_template(
-        "season.html", season_number=snum, current_year=current_year, episode_list=episode_list
+        "season.html", season_number=snum, current_year=current_year,
+        episode_list=episode_list
     )
 
 
-@app.route("/episodes/mono")
-def season_mono():
-    """Set up mono episodes page."""
+@app.route("/episodes/specials")
+def season_spec():
+    """Set up special episodes page."""
     # Fetch episode list for season.
     episode_list = get_episode_list(0)
     return render_template(
-        "mono.html", current_year=current_year, episode_list=episode_list
+        "specials.html", current_year=current_year, episode_list=episode_list
     )
 
 
