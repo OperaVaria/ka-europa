@@ -24,6 +24,23 @@ document.querySelectorAll(".new-tab-btn").forEach((btn) => {
   });
 });
 
+// Details elements closing animation.
+document.querySelectorAll("details").forEach((det) => {
+  det.addEventListener("click", (e) => {
+    if (det.hasAttribute("open")) {
+      e.preventDefault();
+      det.classList.add("closing");
+    }
+  });
+
+  det.addEventListener("animationend", (e) => {
+    if (e.animationName === "close") {
+      det.removeAttribute("open");
+      det.classList.remove("closing");
+    }
+  });
+});
+
 // Left side menu button.
 if (menuBtn) {
   menuBtn.addEventListener("click", () => {
@@ -37,21 +54,6 @@ if (infoBtn) {
     toggleMenuRight();
   });
 }
-
-// Details elements animation.
-details.addEventListener("click", (e) => {
-  if (details.hasAttribute("open")) {
-    e.preventDefault();
-    details.classList.add("closing");
-  }
-});
-
-details.addEventListener("animationend", (e) => {
-  if (e.animationName === "close") {
-    details.removeAttribute("open");
-    details.classList.remove("closing");
-  }
-});
 
 // Page opening functions:
 
