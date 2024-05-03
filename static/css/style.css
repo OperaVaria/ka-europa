@@ -204,6 +204,7 @@ button:hover {
 /* Detail element with animation*/
 
 summary {
+  cursor: pointer;
   font-weight: bold;
   max-width: 50ch;
   text-decoration: underline;
@@ -271,8 +272,8 @@ img {
 }
 
 .spotify {
-    border-radius: 12px;
-    border: 0;
+  border-radius: 12px;
+  border: 0;
 }
 
 /* Footer */
@@ -296,10 +297,10 @@ img {
 
 /* On smaller screens: downscale header, resize Spotify embeds. */
 @media only screen and (max-width: 1024px) {
-    .header {
-        font-size: 1.75rem;
-        padding: 2vh 0;
-    }
+  .header {
+    font-size: 1.75rem;
+    padding: 2vh 0;
+  }
 
   .spotify-cont {
     width: 80vw;
