@@ -8,7 +8,7 @@
   {% for episode in episode_list %}
   <details class="item subtitle" title="{{episode.title}}">
     <summary>{{episode.title}}</summary>
-    <article class="container vertical small-margin" title="Részletek">
+    <article class="container vertical small-margin" aria-label="Részletek">
       <div class="item" role="none">
         <p class="info-text" title="Epizód információ">{{episode.descr}}</p>
       </div>

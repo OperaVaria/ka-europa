@@ -99,6 +99,7 @@ body {
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   margin: auto;
+  max-width: 90%;
   padding: 1vh 0.5vw;
   text-align: justify;
   text-align-last: center;
@@ -305,6 +306,10 @@ img {
     padding: 2vh 0;
   }
 
+  .info-text {
+    max-width: 70vw;
+  }
+
   .spotify-cont {
     width: 80vw;
   }
@@ -313,14 +318,9 @@ img {
 /* On mobile screens: downscale some fonts, increase container margin. */
 @media only screen and (max-width: 480px) {
   .header {
-    font-size: 1.25rem;
-  }
-
-  .sidemn a {
     font-size: 1rem;
   }
 
   .sidemn p {
-    font-size: 0.5rem;
+    font-size: 1em;
   }
-}

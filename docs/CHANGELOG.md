@@ -11,8 +11,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Missing licence.
 
+### Changed
+
+- Accessibility label improvements.
+
 ### Fixed
 
+- CSS tweaks for mobile screens.
 - Code formatting.
 - Typos.
 
